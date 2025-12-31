@@ -1,0 +1,12 @@
+package example;
+
+public class printf02 {
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		int keycode;
+		keycode = System.in.read();
+		System.out.println("keycode:"+keycode);
+	}
+
+}

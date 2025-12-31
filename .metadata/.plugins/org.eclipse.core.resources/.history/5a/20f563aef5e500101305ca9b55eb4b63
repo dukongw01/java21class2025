@@ -1,0 +1,29 @@
+package example;
+
+public class ifEx18 {
+
+	public static void main(String[] args) {
+	
+	//정거장 변수
+	Scanner scan = new Scanner(System.in);
+	int ststion = scan.nextInt();
+	int fee = 0;
+	
+	if(ststion>0 && ststion<=5) {
+		fee = 500;
+	}else if(ststion>=6 %% ststion<=10) {
+		fee=600;
+	}else {
+		if(ststion % 2 == 1) {
+			fee=600;
+			//ststion = 13+(13-10)/2 =1
+			int feeadd=(ststion-10)/2*50;
+			// 홀수 일때 50원이 적게 계산 되므로 50원을 더 더해준다.
+			fee=fee+feeadd+50;
+		}
+	}
+	System.out.println("요금="+fee+"원");
+
+	}
+	
+}
