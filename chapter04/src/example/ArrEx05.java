@@ -1,0 +1,44 @@
+package example;
+
+import java.util.*;
+
+public class ArrEx05 {
+
+	public static void main(String[] args) {
+//		학생성적관리 프로그램: 예외처리
+//		int[] hakbuns = {1001, 1002, 1003, 1004, 1005};
+//		int[] scores = { 87, 11, 45, 98, 23};
+//		문제) 학번을 입력받아 성적 출력
+//		단, 없는학번 입력 시 예외처리
+//		예)
+//		학번 입력 : 1002  
+//		학번 입력 : 1000  
+//		성적 : 11점
+//		해당학번은 존재하지 않습니다.
+		
+		Scanner scan = new Scanner(System.in);
+		
+		int[] hakbuns = {1001, 1002, 1003, 1004, 1005};
+		int[] scores = { 87, 11, 45, 98, 23};
+		
+		
+		System.out.println("학번:");
+		int hak = scan.nextInt(); //1001 
+		int chk = -1; //학번 존재 여부 체크 키
+		
+		for(int i=0; i<hakbuns.length; i++) {
+			if(hakbuns[i]==hak) {
+				chk = i; // 1002 -> 1, 현재 chk=1
+				System.out.println("성적:"+scores[chk]);
+			}
+		}
+		if(chk != -1) {
+//			System.out.println(hakbuns[chk]);
+		}else {
+			System.out.println("존재 않는 학번");
+		}
+
+
+	}
+
+}
